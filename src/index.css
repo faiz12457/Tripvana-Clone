@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+.text-primary{
+    color:#FFFFFF
+
+}
+
+.text-secondary{
+    color: #091733;
+}
+
+
+.nav-bg{
+    background-color: #091733
+}
