@@ -1,6 +1,8 @@
 import { Sparkle } from 'lucide-react'
 import React from 'react'
 import { Card } from './Card';
+import ButtonPrimary from '../UI/ButtonPrimary';
+import SectionTag from '../UI/SectionTag';
 
 
 function PacakgesInfo() {
@@ -13,15 +15,11 @@ function PacakgesInfo() {
 
 
  <div className="mx-auto  flex flex-col items-center  gap-7">
-        <div className="flex gap-0.5 items-center">
-          <div className="size-9 rounded-full shadow flex justify-center items-center">
-            {/* Icon here */}
-            <Sparkle className="text-white " size={22} fill="#0b1c3a" />
-          </div>
-          <div className="px-3.5 py-2 w-fit rounded-full shadow">
-             Packages
-          </div>
-        </div>
+        <SectionTag
+            text={"Pacakges"}
+      
+          />
+      
 
         <div>
           <p className="text-zinc-800  text-center text-5xl tracking-tight font-semibold">
@@ -35,12 +33,13 @@ function PacakgesInfo() {
 
       <div className=' flex gap-2  w-fit mx-auto'>
     {
-        tabs.map((activity)=>(
-            <button onClick={()=>setActiveTab(activity)} className={`px-4 py-3 rounded-full cursor-pointer 
-             text-black ${activeTab===activity?"bg-[#091733] text-white":"bg-[#f8f8f8]"}`}>
-             {activity}
-            </button>
-        ))
+      tabs.map((tab)=>{
+        return <ButtonPrimary 
+        onclick={()=>setActiveTab(tab)}
+        className={`${activeTab===tab?"bg-[#091733]":"bg-[#f8f8f8] text-black!"}`}>
+            {tab}
+    </ButtonPrimary>
+      })
     }
      
     </div>

@@ -4,11 +4,13 @@ import Team from "../components/Team/Team";
 import Blog from "../components/Blog/Blog";
 import AboutInfo from "../components/AboutInfo/AboutInfo";
 import VideoSec from "../components/VideoSec/VideoSec";
+import FeaturesStays from "../components/FeaturesStays/FeaturesStays";
 
 function About() {
   return (
     <div>
       <HeroSec />
+      <FeaturesStays />
       <AboutInfo />
       <Team />
       <Blog />

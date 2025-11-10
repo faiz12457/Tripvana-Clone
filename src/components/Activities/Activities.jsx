@@ -1,72 +1,55 @@
-import React from 'react'
+import React from "react";
 
 function Activities() {
+  const [activeTab, setActiveTab] = React.useState("All");
 
-    const [activeTab,setActiveTab]=React.useState("All");
+  const tabs = ["All", "Adventure", "Cultural", "Relaxation", "Wildlife"];
 
-    const tabs=["All","Adventure","Cultural","Relaxation","Wildlife"]
-       
   return (
-    <div className='w-full  bg-white px-10 '>
+    <div className="w-full  bg-white px-10 ">
+      <div className="mx-auto  flex flex-col items-center py-24 gap-7">
+        <SectionTag
+          text={"Our Tour Activities"}
+      
+        />
 
-    
-        <div className='mx-auto  flex flex-col items-center py-24 gap-7'>
-
-       <div className='flex gap-0.5 items-center'>
-       <div className='size-9 rounded-full shadow flex justify-center items-center'>
-         {/* Icon here */}
-             <Sparkle className="text-white " size={22} fill='#0b1c3a' />
-       </div>
-       <div className='px-3.5 py-2 w-fit rounded-full shadow'>
-        Our Tour Activities
-       </div>
-
-
-       </div>
-
-       <div>
-        <p className='text-zinc-800  text-center text-5xl tracking-tight font-semibold'>
-         Whether you seek adventure, <br />
-culture, or calm — we’ve got the <br />
-perfect experience for every kind <br/>
-of traveler.
-
-        </p>
-       </div>
-
+        <div>
+          <p className="text-zinc-800  text-center text-5xl tracking-tight font-semibold">
+            Whether you seek adventure, <br />
+            culture, or calm — we’ve got the <br />
+            perfect experience for every kind <br />
+            of traveler.
+          </p>
         </div>
-    
+      </div>
 
+      <div>
+        {/* Activities content  */}
 
-<div>
-    {/* Activities content  */}
+        <div className=" flex gap-2  w-fit mx-auto">
+          {tabs.map((tab) => {
+            return (
+              <ButtonPrimary
+                onclick={() => setActiveTab(tab)}
+                className={`${
+                  activeTab === tab
+                    ? "bg-[#091733]"
+                    : "bg-[#f8f8f8] text-black!"
+                }`}
+              >
+                {tab}
+              </ButtonPrimary>
+            );
+          })}
+        </div>
 
-
-    <div className=' flex gap-2  w-fit mx-auto'>
-    {
-        tabs.map((activity)=>(
-            <button onClick={()=>setActiveTab(activity)} className={`px-4 py-3 rounded-full cursor-pointer 
-             text-black ${activeTab===activity?"bg-[#091733] text-white":"bg-[#f8f8f8]"}`}>
-             {activity}
-            </button>
-        ))
-    }
-     
+        <TrueInfiniteSwiper />
+      </div>
     </div>
-
-
-    <TrueInfiniteSwiper />
-
-</div>
-
-    </div>
-  )
+  );
 }
 
-export default Activities
-
-
-
+export default Activities;
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
@@ -74,7 +57,9 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/autoplay";
-import { Sparkle } from 'lucide-react';
+import { Sparkle } from "lucide-react";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import SectionTag from "../UI/SectionTag";
 
 const images = [
   "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
@@ -88,7 +73,7 @@ const images = [
 
 const heights = [320, 380, 300, 360, 340, 390, 310];
 
- function TrueInfiniteSwiper() {
+function TrueInfiniteSwiper() {
   return (
     <div className="w-full overflow-hidden py-10">
       {/* first swiper */}
@@ -150,5 +135,3 @@ const heights = [320, 380, 300, 360, 340, 390, 310];
     </div>
   );
 }
-
-

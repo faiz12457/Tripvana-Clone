@@ -2,21 +2,15 @@ import { Sparkle } from "lucide-react";
 import { TestimonialCard } from "./TestimonialCard";
 import { ReviewCard } from "./ReviewCard";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import SectionTagSecondary from "../UI/SectionTagSecondary";
 
 function TravellerReview() {
   return (
     <div className="px-3">
       <div className=" w-full  py-24 space-y-10 px-10 bg-[#091733]  rounded-3xl">
         <div className="mx-auto  flex flex-col items-center  gap-7">
-          <div className="flex gap-0.5 items-center text-white">
-            <div className="size-9 rounded-full border border-gray-700 flex justify-center items-center">
-              {/* Icon here */}
-              <Sparkle className="text-[#0b1c3a] " size={18} fill="#fff" />
-            </div>
-            <div className="px-3.5 py-2 w-fit rounded-full border border-gray-700">
-              Travelers Review
-            </div>
-          </div>
+        <SectionTagSecondary text="Travelers Review" />
+         
 
           <div>
             <p className="text-white  text-center text-2xl tracking-tight font-semibold">

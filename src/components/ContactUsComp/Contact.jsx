@@ -3,6 +3,7 @@ import React from "react";
 import Form from "./Form";
 import AddressCard from "./AddressCard";
 import NewsLetter from "./NewsLetter";
+import SectionTag from "../UI/SectionTag";
 
 function Contact() {
   return (
@@ -10,15 +11,11 @@ function Contact() {
     <div className="px-10 space-y-10 py-24">
       <div className="  flex justify-between items-center ">
         <div className="space-y-4">
-          <div className="flex gap-0.5 items-center">
-            <div className="size-9 rounded-full shadow flex justify-center items-center">
-              {/* Icon here */}
-              <Sparkle className="text-white " size={22} fill="#0b1c3a" />
-            </div>
-            <div className="px-3.5 py-2 w-fit rounded-full shadow">
-              Contact us
-            </div>
-          </div>
+            <SectionTag
+            text={"Contact us"}
+           
+          />
+      
 
           <div className=" w-fit">
             <p className="text-zinc-800   text-5xl tracking-tight font-semibold">

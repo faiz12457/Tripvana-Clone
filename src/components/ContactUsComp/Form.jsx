@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonPrimary from "../UI/ButtonPrimary";
 
 function Form() {
   const fields = [
@@ -49,13 +50,8 @@ function Form() {
 
         {/* button */}
 
-        <button className="px-5 py-3 rounded-full bg-[#091733] text-white cursor-pointer">
-          Send Message
-        </button>
+        <ButtonPrimary type="submit">Send Message</ButtonPrimary>
       </form>
-
-
-
     </div>
   );
 }

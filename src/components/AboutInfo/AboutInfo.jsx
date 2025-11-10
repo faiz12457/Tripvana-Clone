@@ -7,15 +7,7 @@ function AboutInfo() {
       <div className=" w-full py-24 px-10  bg-[#091733]  space-y-10 ">
         <div className="grid  grid-cols-2">
           <div className="flex flex-col items-start  space-y-8">
-            <div className="flex gap-0.5 items-center">
-              <div className="size-9 rounded-full border border-gray-700 shadow flex justify-center items-center">
-                {/* Icon here */}
-                <Sparkle className="text-[#091733]" size={22} fill="#fff" />
-              </div>
-              <div className="px-3.5 py-2 w-fit border text-white border-gray-700 rounded-full shadow">
-                About Tripvana
-              </div>
-            </div>
+            <SectionTagSecondary text="About Tripvana" />
 
             <div className="space-y-5">
               <p className="text-white text-5xl break-all wrap-break-word  tracking-tight font-semibold">
@@ -69,15 +61,7 @@ function AboutInfo() {
       <div className=" w-full py-24 px-10 bg-[#091733]   rounded-b-4xl space-y-10 ">
         <div className="grid grid-cols-2">
           <div>
-            <div className="flex gap-0.5 items-center">
-              <div className="size-9 rounded-full border border-gray-700 shadow flex justify-center items-center">
-                {/* Icon here */}
-                <Sparkle className="text-[#091733]" size={22} fill="#fff" />
-              </div>
-              <div className="px-3.5 py-2 w-fit border text-white border-gray-700 rounded-full shadow">
-                Guest Speech
-              </div>
-            </div>
+           <SectionTagSecondary text="Guest Speech" />
           </div>
 
           <div className="space-y-8 ">
@@ -108,6 +92,7 @@ export default AboutInfo;
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { motion } from "framer-motion";
 import VideoSec from "../VideoSec/VideoSec";
+import SectionTagSecondary from "../UI/SectionTagSecondary";
 
 function Accordain({ id, open, setOpen }) {
   return (
