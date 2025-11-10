@@ -38,7 +38,7 @@ function AboutInfo() {
             <div className="flex gap-4 items-center">
               <img src="/contactAuthor.webp" className=" rounded-xl w-16" />
 
-              <div className="space-1">
+              <div className="space-y-1">
                 <p className="text-white text-xl font-medium">
                   Clarissa Gardner
                 </p>

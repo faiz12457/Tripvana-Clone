@@ -23,7 +23,7 @@ function Team() {
         </div>
       </div>
 
-      <div className="flex gap-5">
+      <div className="flex flex-wrap gap-5">
         <Card />
         <Card />
         <Card />

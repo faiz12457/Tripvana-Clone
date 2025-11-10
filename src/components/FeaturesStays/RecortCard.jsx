@@ -1,13 +1,16 @@
 import { FaTree, FaBed, FaWater } from "react-icons/fa";
+import { IoMdVolumeHigh } from "react-icons/io";
 
-export default function ResortCard() {
+export default function ResortCard({image,id}) {
+  console.log(image)
+
   return (
     <div className="w-[608px] pb-2 shrink-0 relative bg-white mx-auto ">
     
       {/* Arched Image */}
       <div className="">
         <img
-          src="/recort.png"
+          src={image}
           alt="resort-img"
           className=" object-cover rounded-t-full shadow h-[342px] w-full rounded-b-2xl"
         />

@@ -1,3 +1,5 @@
+import ButtonPrimary from "../UI/ButtonPrimary";
+
 export function Card() {
   return (
     <div className="space-y-4  group   rounded-xl cursor-pointer  bg-white">
@@ -30,9 +32,10 @@ export function Card() {
         mountain stays.
       </p>
 
-      <button className="px-5 cursor-pointer py-3 rounded-full font-medium border border-gray-300">
-        Book Tour Now
-      </button>
+<ButtonPrimary className="bg-white text-black! font-medium border border-gray-300">
+Book Tour Now
+</ButtonPrimary>
+      
     </div>
   );
 }

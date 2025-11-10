@@ -16,7 +16,7 @@ function PacakgesInfo() {
 
  <div className="mx-auto  flex flex-col items-center  gap-7">
         <SectionTag
-            text={"Pacakges"}
+            text={"Packages"}
       
           />
       
